@@ -126,6 +126,7 @@ void setup()
   digitalWrite(RIGHT_RELAY_PIN, 1);
   digitalWrite(LEFT_RELAY_PIN, 1);
   
+  
   Ethernet.begin(mac, ip);
   webserver.setDefaultCommand(&lightCmd);
   webserver.begin();
