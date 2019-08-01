@@ -122,6 +122,9 @@ void setup()
   pinMode(BLUE_PIN, OUTPUT);
   pinMode(RIGHT_RELAY_PIN, OUTPUT);
   pinMode(LEFT_RELAY_PIN, OUTPUT);
+
+  digitalWrite(RIGHT_RELAY_PIN, 1);
+  digitalWrite(LEFT_RELAY_PIN, 1);
   
   Ethernet.begin(mac, ip);
   webserver.setDefaultCommand(&lightCmd);
@@ -314,4 +317,3 @@ void loop()
     analogWrite(BLUE_PIN, blue);  
   }  
 }
-
